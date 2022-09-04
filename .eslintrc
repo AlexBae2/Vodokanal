@@ -1,0 +1,87 @@
+{
+  "extends": [
+    "airbnb/hooks",
+    "prettier",
+    "plugin:react/recommended",
+    "plugin:prettier/recommended",
+    "plugin:jsx-a11y/recommended",
+    "plugin:import/recommended"
+  ],
+  "plugins": ["react", "jsx-a11y"],
+  "env": {
+    "browser": true,
+    "es2020": true
+  },
+  "globals": {
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2020,
+    "sourceType": "module",
+    "project": "./tsconfig.json"
+  },
+  "settings": {
+    "import/resolver": {
+      "node": {
+        "paths": ["src"],
+        "extensions": [".js", ".ts", ".d.ts", ".tsx"]
+      }
+    }
+  },
+  "rules": {
+    "react/jsx-filename-extension": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "linebreak-style": "off",
+    "no-unused-vars": "off",
+    "import/prefer-default-export": "off",
+    "react/jsx-props-no-spreading": "off",
+    "import/no-cycle": "off",
+    "no-console": "off",
+    "import/no-extraneous-dependencies": [
+      "warn",
+      {
+        "packageDir": "./"
+      }
+    ],
+    "no-shadow": "off",
+    "no-prototype-builtins": "off",
+    "react/prop-types": "off",
+    "no-useless-return": "off",
+    "jsx-a11y/no-static-element-interactions": "off",
+    "react-hooks/exhaustive-deps": "off",
+    "react/state-in-constructor": "off",
+    "no-restricted-syntax": "off",
+    "no-nested-ternary": "off",
+    "react/no-array-index-key": "off",
+    "react/destructuring-assignment": "warn",
+    "no-param-reassign": ["error", {
+      "props": true,
+      "ignorePropertyModificationsFor": ["state", "socket", "button"]
+    }],
+    "react/require-default-props": "off",
+    "no-underscore-dangle": ["error", {
+      "allow": ["_retry"]
+    }],
+    "spaced-comment": "off",
+    "jsx-a11y/label-has-associated-control": [ "error", {
+      "required": {
+        "some": [ "nesting", "id"  ]
+      }
+    }],
+    "jsx-a11y/label-has-for": [ "error", {
+      "required": {
+        "some": [ "nesting", "id"  ]
+      }
+    }],
+    "prettier/prettier": [
+      "error",
+      {
+        "endOfLine": "auto"
+      }
+    ]
+  }
+}
