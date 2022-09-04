@@ -5,12 +5,12 @@ import { useWidthWindow } from "../../../hooks/useWidthWindow.js";
 import { LogoWrapper } from "./styles.js";
 
 const Logo = () => {
-  const width = useWidthWindow();
-  return (
-    <LogoWrapper>
-      <img src={width > 569 ? largeLogo : miniLogo} alt={"Logo"} />
-    </LogoWrapper>
-  );
+	const width = useWidthWindow();
+	return (
+		<LogoWrapper>
+			<img src={width > 569 ? largeLogo : miniLogo} alt={"Logo"} />
+		</LogoWrapper>
+	);
 };
 
 export default Logo;

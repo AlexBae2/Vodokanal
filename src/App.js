@@ -1,7 +1,7 @@
 import React from "react";
 import styled, { createGlobalStyle } from "styled-components";
-import Auth from "./components/Auth/Auth.js";
 import Header from "./components/Header/Header.js";
+import Posts from "./components/Posts/Posts.js";
 
 export const SectionInner = styled.div`
   max-width: 1440px;
@@ -31,8 +31,8 @@ const App = () => {
     <Wrapper>
       <GlobalStyle></GlobalStyle>
       <Header />
-      {/*<MainLayout />*/}
-      <Auth></Auth>
+      <Posts />
+      {/*<Auth />*/}
     </Wrapper>
   );
 };

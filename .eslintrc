@@ -33,6 +33,7 @@
     }
   },
   "rules": {
+    "indent": ["error", "tab"],
     "react/jsx-filename-extension": "off",
     "jsx-a11y/click-events-have-key-events": "off",
     "linebreak-style": "off",

@@ -5,16 +5,16 @@ import Logout from "./Logout/Logout.js";
 import { HeaderFlex, HeaderSection } from "./styles.js";
 
 const Header = () => {
-  return (
-    <HeaderSection>
-      <SectionInner>
-        <HeaderFlex>
-          <Logo />
-          <Logout />
-        </HeaderFlex>
-      </SectionInner>
-    </HeaderSection>
-  );
+	return (
+		<HeaderSection>
+			<SectionInner>
+				<HeaderFlex>
+					<Logo />
+					<Logout />
+				</HeaderFlex>
+			</SectionInner>
+		</HeaderSection>
+	);
 };
 
 export default Header;
