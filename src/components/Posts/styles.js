@@ -1,12 +1,13 @@
-import styled from "styled-components";
-import { mediaDevice } from "../../utils/styledComponent/brakepoints.js";
+import styled from 'styled-components'
+import { mediaDevice } from '../../utils/styledComponent/brakepoints.js'
 
-export const MainLayoutSection = styled.section``;
+export const MainLayoutSection = styled.section``
 
 export const Grid = styled.div`
+  overflow: hidden;
   display: grid;
   grid-template-columns: 1fr 1fr;
-  max-width: 947px;
+  max-width: 960px;
   margin: 0 auto;
   gap: 20px 13px;
   @media ${mediaDevice.laptop} {
@@ -24,4 +25,4 @@ export const Grid = styled.div`
     max-width: 292px;
     grid-template-columns: 1fr;
   }
-`;
+`

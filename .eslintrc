@@ -1,9 +1,7 @@
 {
   "extends": [
     "airbnb/hooks",
-    "prettier",
     "plugin:react/recommended",
-    "plugin:prettier/recommended",
     "plugin:jsx-a11y/recommended",
     "plugin:import/recommended"
   ],
@@ -33,6 +31,8 @@
     }
   },
   "rules": {
+    "semi": ["error", "never"],
+    "quotes": ["error", "single"],
     "indent": ["error", "tab"],
     "react/jsx-filename-extension": "off",
     "jsx-a11y/click-events-have-key-events": "off",
@@ -77,12 +77,6 @@
       "required": {
         "some": [ "nesting", "id"  ]
       }
-    }],
-    "prettier/prettier": [
-      "error",
-      {
-        "endOfLine": "auto"
-      }
-    ]
+    }]
   }
 }

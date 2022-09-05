@@ -1,5 +1,5 @@
 export default {
 	posts: {
-		root: "/posts",
+		root: '/posts',
 	},
-};
+}

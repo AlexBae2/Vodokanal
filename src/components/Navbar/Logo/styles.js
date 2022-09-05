@@ -1,7 +1,7 @@
-import styled from "styled-components";
-import { mediaDevice } from "../../../utils/styledComponent/brakepoints.js";
+import styled from 'styled-components'
+import { mediaDevice } from '../../../utils/styledComponent/brakepoints.js'
 
-export const LogoWrapper = styled.div`
+export const LogoContainer = styled.div`
   position: relative;
   top: 5px;
   left: 39px;
@@ -13,4 +13,4 @@ export const LogoWrapper = styled.div`
     top: 2px;
     left: -24px;
   }
-`;
+`
