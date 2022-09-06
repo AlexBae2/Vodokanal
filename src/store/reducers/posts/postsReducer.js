@@ -1,38 +1,44 @@
-import { createSlice } from '@reduxjs/toolkit'
-import { fetchAllPosts, fetchPosts } from './thunks/index.js'
+import {createSlice} from "@reduxjs/toolkit";
+import {fetchAllData, fetchPosts} from "./thunks/index.js";
 
 const initialState = {
-	posts: [],
-	isLoading: true,
-	countPages: 0,
-	error: '',
-}
+  posts: [],
+  users: [],
+  photos: [],
+  isLoading: true,
+  countPages: 0,
+  error: "",
+};
 
 export const postsSlicer = createSlice({
-	name: 'posts',
-	initialState,
-	reducers: {},
-	extraReducers: {
-		[fetchPosts.fulfilled.type]: (state, action) => {
-			state.isLoading = false
-			state.posts = [...state.posts,...action.payload]
-		},
-		[fetchPosts.pending.type]: (state) => {
-			state.isLoading = true
-		},
-		[fetchPosts.rejected.type]: (state, action) => {
-			state.isLoading = false
-			state.error = action.payload
-		},
-		[fetchAllPosts.fulfilled.type]: (state, action) => {
-			state.countPages = action.payload.length / 10
-		},
-		[fetchAllPosts.rejected.type]: (state, action) => {
-			state.error = action.payload
-		},
-	},
-})
+  name: "posts",
+  initialState,
+  reducers: {},
+  extraReducers: {
+    [fetchPosts.fulfilled.type]: (state, action) => {
+      state.posts = [...state.posts, ...action.payload];
+    },
 
-export const {} = postsSlicer.actions
+    [fetchPosts.rejected.type]: (state, action) => {
+      state.error = action.payload;
+    },
 
-export default postsSlicer.reducer
+    [fetchAllData.fulfilled.type]: (state, action) => {
+      state.photos = [...state.photos, ...action.payload.photos];
+      state.users = [...state.users, ...action.payload.users];
+      state.countPages = action.payload.posts.length / 10;
+      state.isLoading = false;
+    },
+    [fetchAllData.pending.type]: (state) => {
+      state.isLoading = true;
+    },
+    [fetchAllData.rejected.type]: (state, action) => {
+      state.error = action.payload;
+      state.isLoading = false;
+    },
+  },
+});
+
+export const {} = postsSlicer.actions;
+
+export default postsSlicer.reducer;
