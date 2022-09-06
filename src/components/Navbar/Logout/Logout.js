@@ -1,28 +1,28 @@
-import React from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import { useNavigate } from 'react-router-dom'
-import logoutSVG from '../../../assets/img/icons/logout.svg'
-import { unAuthorization } from '../../../store/reducers/auth/authReducer.js'
-import { LogoutWrapper, UserName } from './styles.js'
+import React from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { useNavigate } from "react-router-dom";
+import logoutSVG from "../../../assets/img/icons/logout.svg";
+import { unAuthorization } from "../../../store/reducers/auth/authReducer.js";
+import { LogoutWrapper, UserName } from "./styles.js";
 
 const Logout = () => {
-	const dispatch = useDispatch()
-	const login = useSelector((state) => state.auth.login)
-	const navigate = useNavigate()
+  const dispatch = useDispatch();
+  const login = useSelector((state) => state.auth.login);
+  const navigate = useNavigate();
 
-	const setLogout = () => {
-		dispatch(unAuthorization())
-		navigate('/')
-	}
+  const setLogout = () => {
+    dispatch(unAuthorization());
+    navigate("/");
+  };
 
-	return (
-		<LogoutWrapper>
-			<UserName>{login}</UserName>
-			<button onClick={() => setLogout()}>
-				<img src={logoutSVG} alt={'logout'} />
-			</button>
-		</LogoutWrapper>
-	)
-}
+  return (
+    <LogoutWrapper>
+      <UserName>{login}</UserName>
+      <button onClick={() => setLogout()}>
+        <img src={logoutSVG} alt={"logout"} />
+      </button>
+    </LogoutWrapper>
+  );
+};
 
-export default Logout
+export default Logout;

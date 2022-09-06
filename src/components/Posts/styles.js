@@ -1,7 +1,7 @@
-import styled from 'styled-components'
-import { mediaDevice } from '../../utils/styledComponent/brakepoints.js'
+import styled from "styled-components";
+import { mediaDevice } from "../../utils/styledComponent/brakepoints.js";
 
-export const MainLayoutSection = styled.section``
+export const MainLayoutSection = styled.section``;
 
 export const Grid = styled.div`
   overflow: hidden;
@@ -25,4 +25,4 @@ export const Grid = styled.div`
     max-width: 292px;
     grid-template-columns: 1fr;
   }
-`
+`;

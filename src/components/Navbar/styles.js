@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import { mediaDevice } from '../../utils/styledComponent/brakepoints.js'
+import styled from "styled-components";
+import { mediaDevice } from "../../utils/styledComponent/brakepoints.js";
 
 export const NavbarSection = styled.header`
   padding: 27px 35px 28px 41px;
@@ -8,9 +8,9 @@ export const NavbarSection = styled.header`
   @media ${mediaDevice.mobileM} {
     margin-bottom: 8px;
   }
-`
+`;
 export const NavbarContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
-`
+`;

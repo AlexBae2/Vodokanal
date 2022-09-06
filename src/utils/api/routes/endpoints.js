@@ -1,5 +1,11 @@
 export default {
-	posts: {
-		root: '/posts',
-	},
-}
+  posts: {
+    root: "/posts",
+  },
+  users: {
+    root: "/users",
+  },
+  photos: {
+    root: "/photos",
+  },
+};

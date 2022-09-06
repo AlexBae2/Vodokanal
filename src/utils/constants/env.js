@@ -1,1 +1,1 @@
-export const DOMAIN = 'https://jsonplaceholder.typicode.com/'
+export const DOMAIN = "https://jsonplaceholder.typicode.com/";

@@ -1,5 +1,5 @@
-import styled from 'styled-components'
-import { mediaDevice } from '../../../utils/styledComponent/brakepoints.js'
+import styled from "styled-components";
+import { mediaDevice } from "../../../utils/styledComponent/brakepoints.js";
 
 export const LogoutWrapper = styled.div`
   display: flex;
@@ -19,11 +19,11 @@ export const LogoutWrapper = styled.div`
     top: 1px;
     left: 18px;
   }
-`
+`;
 
 export const UserName = styled.div`
   margin-right: 27px;
   @media (max-width: 769px) {
     display: none;
   }
-`
+`;
