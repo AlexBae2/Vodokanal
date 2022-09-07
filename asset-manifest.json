@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/Vodokanal/static/css/main.8c31dda2.css",
-    "main.js": "/Vodokanal/static/js/main.7bbc5944.js",
+    "main.js": "/Vodokanal/static/js/main.40f6d03c.js",
     "static/media/largeLogo.svg": "/Vodokanal/static/media/largeLogo.bcfa4e474eaa721465e174cb5432563e.svg",
     "static/media/miniLogo.svg": "/Vodokanal/static/media/miniLogo.d976397da3509dc4aec03199ca870162.svg",
     "static/media/logout.svg": "/Vodokanal/static/media/logout.5e752d6665f88ef254b4b535254c16d7.svg",
     "index.html": "/Vodokanal/index.html",
     "main.8c31dda2.css.map": "/Vodokanal/static/css/main.8c31dda2.css.map",
-    "main.7bbc5944.js.map": "/Vodokanal/static/js/main.7bbc5944.js.map"
+    "main.40f6d03c.js.map": "/Vodokanal/static/js/main.40f6d03c.js.map"
   },
   "entrypoints": [
     "static/css/main.8c31dda2.css",
-    "static/js/main.7bbc5944.js"
+    "static/js/main.40f6d03c.js"
   ]
 }
