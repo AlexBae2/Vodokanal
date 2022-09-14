@@ -2,7 +2,7 @@ import React from "react";
 import Auth from "../components/Auth/Auth.js";
 import Posts from "../components/Posts/Posts.js";
 
-export const publicRoutes = () => {
+export const routes = () => {
   return [
     {
       path: "/*",

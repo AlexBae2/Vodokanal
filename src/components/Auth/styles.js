@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { mediaDevice } from "../../utils/styledComponent/brakepoints.js";
+import {mediaDevice} from "../../utils/styledComponent/breakpoints.js";
 
 export const AuthWrapper = styled.div`
   margin: 10px;
@@ -52,12 +52,14 @@ export const Submit = styled.button`
 `;
 
 export const Input = styled.input`
-  background: #d9d9d9;
-  border: 3px solid #27569c;
-  border-radius: 10px;
-  height: 30px;
-  max-width: 260px;
-`;
+  ${props  => props.type === 'passowrd' && `
+      background: #d9d9d9;
+      border: 3px solid #27569c;
+      border-radius: 10px;
+      height: 30px;
+      max-width: 260px;
+  `}
+`
 
 export const Label = styled.div`
   margin-right: 20px;

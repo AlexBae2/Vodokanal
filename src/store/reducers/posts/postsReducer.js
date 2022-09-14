@@ -18,7 +18,6 @@ export const postsSlicer = createSlice({
     [fetchPosts.fulfilled.type]: (state, action) => {
       state.posts = [...state.posts, ...action.payload];
     },
-
     [fetchPosts.rejected.type]: (state, action) => {
       state.error = action.payload;
     },
@@ -31,10 +30,6 @@ export const postsSlicer = createSlice({
     },
     [fetchAllData.pending.type]: (state) => {
       state.isLoading = true;
-    },
-    [fetchAllData.rejected.type]: (state, action) => {
-      state.error = action.payload;
-      state.isLoading = false;
     },
   },
 });

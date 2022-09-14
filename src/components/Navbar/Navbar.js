@@ -1,8 +1,8 @@
 import React from "react";
-import { SectionInner } from "../../App.js";
 import Logo from "./Logo/Logo.js";
 import Logout from "./Logout/Logout.js";
-import { NavbarContainer, NavbarSection } from "./styles.js";
+import {NavbarContainer, NavbarSection} from "./styles.js";
+import {SectionInner} from "../../App.styles.js";
 
 const Navbar = () => {
   return (

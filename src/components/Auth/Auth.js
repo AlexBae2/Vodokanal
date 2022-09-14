@@ -1,20 +1,10 @@
-import React, { useState } from "react";
-import { useDispatch } from "react-redux";
-import { useNavigate } from "react-router-dom";
-import { SectionInner } from "../../App.js";
-import { authorization } from "../../store/reducers/auth/authReducer.js";
-import { ShowError } from "../../utils/react-notifications-component/notifications.js";
-import {
-  AuthBorder,
-  AuthContainer,
-  AuthSection,
-  AuthWrapper,
-  Center,
-  Input,
-  Label,
-  Submit,
-  Title,
-} from "./styles.js";
+import React, {useState} from "react";
+import {useDispatch} from "react-redux";
+import {useNavigate} from "react-router-dom";
+import {authorization} from "../../store/reducers/auth/authReducer.js";
+import {ShowError} from "../../utils/react-notifications-component/notifications.js";
+import {AuthBorder, AuthContainer, AuthSection, AuthWrapper, Center, Input, Label, Submit, Title,} from "./styles.js";
+import {SectionInner} from "../../App.styles.js";
 
 const Auth = () => {
   const dispatch = useDispatch();
@@ -42,6 +32,7 @@ const Auth = () => {
             <AuthContainer>
               <Label>password</Label>
               <Input
+                  type={'password'}
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
               />
