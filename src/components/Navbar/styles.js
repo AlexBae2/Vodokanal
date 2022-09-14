@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import { mediaDevice } from "../../utils/styledComponent/brakepoints.js";
+import {mediaDevice} from "../../utils/styledComponent/breakpoints.js";
 
 export const NavbarSection = styled.header`
   padding: 27px 35px 28px 41px;

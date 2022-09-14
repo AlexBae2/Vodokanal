@@ -1,0 +1,5 @@
+node_modules/*
+bin/*
+public/*
+webpack*.js
+*config.js
