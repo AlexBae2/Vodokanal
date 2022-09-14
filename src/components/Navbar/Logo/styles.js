@@ -1,5 +1,5 @@
-import styled from "styled-components";
-import {mediaDevice} from "../../../utils/styledComponent/breakpoints.js";
+import styled from 'styled-components';
+import { mediaDevice } from '../../../utils/styledComponent/breakpoints.js';
 
 export const LogoContainer = styled.div`
   position: relative;

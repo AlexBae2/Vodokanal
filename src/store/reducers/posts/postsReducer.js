@@ -1,5 +1,5 @@
-import {createSlice} from "@reduxjs/toolkit";
-import {fetchAllData, fetchPosts} from "./thunks/index.js";
+import { createSlice } from '@reduxjs/toolkit';
+import { fetchAllData, fetchPosts } from './thunks/index.js';
 
 const initialState = {
   posts: [],
@@ -7,11 +7,11 @@ const initialState = {
   photos: [],
   isLoading: true,
   countPages: 0,
-  error: "",
+  error: '',
 };
 
 export const postsSlicer = createSlice({
-  name: "posts",
+  name: 'posts',
   initialState,
   reducers: {},
   extraReducers: {
@@ -34,6 +34,6 @@ export const postsSlicer = createSlice({
   },
 });
 
-export const {} = postsSlicer.actions;
+// export const {} = postsSlicer.actions;
 
 export default postsSlicer.reducer;

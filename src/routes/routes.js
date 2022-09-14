@@ -1,11 +1,11 @@
-import React from "react";
-import Auth from "../components/Auth/Auth.js";
-import Posts from "../components/Posts/Posts.js";
+import React from 'react';
+import Auth from '../components/Auth/Auth.js';
+import Posts from '../components/Posts/Posts.js';
 
 export const routes = () => {
   return [
     {
-      path: "/*",
+      path: '/*',
       element: <Auth />,
     },
   ];
@@ -13,20 +13,20 @@ export const routes = () => {
 export const privateRoutes = () => {
   return [
     {
-      path: "/",
+      path: '/',
       children: [
         {
-          path: "posts",
+          path: 'posts',
           element: <Posts />,
         },
         {
-          path: "auth",
+          path: 'auth',
           element: <Auth />,
         },
       ],
     },
     {
-      path: "/*",
+      path: '/*',
       element: <Auth />,
     },
   ];

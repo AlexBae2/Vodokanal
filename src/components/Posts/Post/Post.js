@@ -1,7 +1,15 @@
-import React from "react";
-import {useWindowWidth} from "../../../hooks/useWindowWidth.js";
-import {deviceSize} from "../../../utils/styledComponent/breakpoints.js";
-import {Author, Border, Box, Container, Names, SubTitle, Title,} from "./styles.js";
+import React from 'react';
+import { useWindowWidth } from '../../../hooks/useWindowWidth.js';
+import { deviceSize } from '../../../utils/styledComponent/breakpoints.js';
+import {
+  Author,
+  Border,
+  Box,
+  Container,
+  Names,
+  SubTitle,
+  Title,
+} from './styles.js';
 
 const Post = ({ body, title, userData, photo }) => {
   const width = useWindowWidth();
@@ -10,7 +18,7 @@ const Post = ({ body, title, userData, photo }) => {
       <Container>
         {width > parseInt(deviceSize.tabletS) ? (
           <Box>
-            <img src={photo?.thumbnailUrl} alt={"square"} />
+            <img src={photo?.thumbnailUrl} alt={'square'} />
           </Box>
         ) : null}
         <Names>

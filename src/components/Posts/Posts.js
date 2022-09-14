@@ -36,7 +36,6 @@ const Posts = () => {
   useEffect(() => {
     dispatch(fetchAllData());
   }, []);
-  debugger;
   return (
     <MainLayoutSection>
       <SectionInner>

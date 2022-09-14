@@ -1,22 +1,32 @@
-import React, {useState} from "react";
-import {useDispatch} from "react-redux";
-import {useNavigate} from "react-router-dom";
-import {authorization} from "../../store/reducers/auth/authReducer.js";
-import {ShowError} from "../../utils/react-notifications-component/notifications.js";
-import {AuthBorder, AuthContainer, AuthSection, AuthWrapper, Center, Input, Label, Submit, Title,} from "./styles.js";
-import {SectionInner} from "../../App.styles.js";
+import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
+import { authorization } from '../../store/reducers/auth/authReducer.js';
+import { ShowError } from '../../utils/react-notifications-component/notifications.js';
+import {
+  AuthBorder,
+  AuthContainer,
+  AuthSection,
+  AuthWrapper,
+  Center,
+  Input,
+  Label,
+  Submit,
+  Title,
+} from './styles.js';
+import { SectionInner } from '../../App.styles.js';
 
 const Auth = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const [login, setLogin] = useState("");
-  const [password, setPassword] = useState("");
+  const [login, setLogin] = useState('');
+  const [password, setPassword] = useState('');
   const submitLoginData = () => {
-    if (login === "" || password === "") {
+    if (login === '' || password === '') {
       ShowError();
     } else {
       dispatch(authorization({ login, password }));
-      navigate("/posts");
+      navigate('/posts');
     }
   };
   return (
@@ -32,7 +42,7 @@ const Auth = () => {
             <AuthContainer>
               <Label>password</Label>
               <Input
-                  type={'password'}
+                type={'password'}
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
               />

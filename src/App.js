@@ -1,11 +1,10 @@
-import React from "react";
-import {ReactNotifications} from "react-notifications-component";
-import {useSelector} from "react-redux";
-import {useRoutes} from "react-router-dom";
-import Navbar from "./components/Navbar/Navbar.js";
-import {privateRoutes, routes} from "./routes/routes.js";
-import {GlobalStyle, Wrapper} from "./App.styles.js";
-
+import React from 'react';
+import { ReactNotifications } from 'react-notifications-component';
+import { useSelector } from 'react-redux';
+import { useRoutes } from 'react-router-dom';
+import Navbar from './components/Navbar/Navbar.js';
+import { privateRoutes, routes } from './routes/routes.js';
+import { GlobalStyle, Wrapper } from './App.styles.js';
 
 const App = () => {
   const isAuth = useSelector((state) => state.auth.isLogged);
