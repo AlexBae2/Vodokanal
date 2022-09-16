@@ -4,6 +4,7 @@
   "type": "module",
   "private": true,
   "dependencies": {
+    "@commitlint/cli": "^17.1.2",
     "@reduxjs/toolkit": "^1.8.5",
     "@types/node": "^16.11.56",
     "@types/react": "^18.0.18",
@@ -32,6 +33,12 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged",
+      "commit-msg": "commitlint -E HUSKY_GIT_PARAMS -g './config/git/commitlint.js'"
+    }
+  },
   "eslintConfig": {
     "extends": [
       "react-app",
@@ -59,6 +66,7 @@
     "@babel/preset-react": "^7.14.5",
     "@typescript-eslint/eslint-plugin": "^5.13.0",
     "@typescript-eslint/parser": "^5.0.0",
+    "cz-customizable": "^7.0.0",
     "eslint": "^8.22.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^8.5.0",
@@ -72,9 +80,12 @@
     "lint-staged": "^13.0.3",
     "prettier": "2.7.1"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged"
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-customizable"
+    },
+    "cz-customizable": {
+      "config": "config/git/commitizen.js"
     }
   },
   "lint-staged": {
